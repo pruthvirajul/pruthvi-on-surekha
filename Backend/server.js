@@ -4,14 +4,14 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3339;
 
 // PostgreSQL connection
 const pool = new Pool({
     user: process.env.DB_USER || 'postgres',
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || 'postgres',
     database: process.env.DB_NAME || 'onboarding_system',
-    password: process.env.DB_PASSWORD || 'root',
+    password: process.env.DB_PASSWORD || 'admin123',
     port: process.env.DB_PORT || 5432,
 });
 
@@ -208,5 +208,5 @@ app.get('/api/employees/search/:term', async (req, res, next) => {
 app.use(errorHandler);
 
 app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server running on http://3.85.61.23:${port}`);
 });
