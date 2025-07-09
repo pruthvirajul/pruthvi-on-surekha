@@ -19,14 +19,14 @@ services:
       context: ./Backend
     container_name: onboarding_backend21
     ports:
-      - "3339:3339"
+      - "3697:3697"
     environment:
       DB_USER: postgres
-      DB_PASSWORD: admin123
+      DB_PASSWORD: admin321
       DB_HOST: postgres
       DB_PORT: 5432
       DB_NAME: onboarding_system
-      PORT: 3339
+      PORT: 3697
     depends_on:
       - postgres
 
@@ -35,7 +35,7 @@ services:
       context: ./Employee-side
     container_name: onboarding_employee_side21
     ports:
-      - "6660:80"
+      - "8098:80"
     depends_on:
       - backend
 
@@ -44,7 +44,7 @@ services:
       context: ./HR-side
     container_name: onboarding_hr_side21
     ports:
-      - "6661:80"
+      - "8099:80"
     depends_on:
       - backend
 
