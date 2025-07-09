@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: onboarding_system
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin123
+      POSTGRES_PASSWORD: admin321
     ports:
       - "6666:5432"
     volumes:
